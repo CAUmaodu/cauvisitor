@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.campus.vistorservice.dao.PointMapper">
+    <resultMap id="PointResultMap" type="com.campus.vistorservice.model.PointModel">
+        <id column="id" property="gid"/>
+        <result column="name" property="name"/>
+        <result column="geometry" property="geometry"/>
+    </resultMap>
+
+    <select id="selectPointByGid" resultMap="PointResultMap">
+        SELECT id, name,
+               ST_AsGeoJSON(geom) AS geometry
+        FROM cau_point WHERE id = #{gid}
+    </select>
+
+    <select id="selectAllPoints" resultMap="PointResultMap">
+        SELECT id, name,
+               ST_AsGeoJSON(geom) AS geometry
+        FROM cau_point
+    </select>
+
+    <select id="selectPointsByName" resultMap="PointResultMap">
+        SELECT id, name,
+               ST_AsGeoJSON(geom) AS geometry
+        FROM cau_point
+        WHERE name ILIKE CONCAT('%', #{name}, '%')
+        ORDER BY LENGTH(name), name
+        LIMIT 80
+    </select>
+</mapper>
