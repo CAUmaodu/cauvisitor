@@ -29,7 +29,26 @@
     * ➕ **pgRouting** (核心：处理路径规划算法)
 
 ---
+在线访问网站： http://101.200.121.83/  点击即可访问
+💻部署到服务器：
 
+1. 安装运行环境：JDK 17、Node.js、PostgreSQL 14、IIS
+
+2. 安装IIS扩展：URL Rewrite模块、ARR(Application Request Routing)
+
+3. 启用ARR代理功能：IIS管理器→服务器节点→Application Request Routing Cache→Server Proxy Settings→勾选Enable proxy
+
+4. 导入数据库：psql执行schema.sql建表 data.sql导入初始数据
+
+5. 构建前端：cd frontend && npm run build 生成dist目录
+
+6. 配置IIS网站：物理路径指向dist目录 端口80
+
+7. 部署web.config：在dist目录放入URL Rewrite规则（反向代理/cauvisitor至localhost:8081）
+
+8. 启动后端：java -jar VistorService.jar 或 mvn spring-boot:run
+
+9. 开放安全组：阿里云控制台入方向放通TCP 80端口本地防火墙：PowerShell添加80端口入站规则
 💻 本地源码启动 (适合开发者)
 如果你想修改代码，可以在本地手动搭建环境运行。
 
