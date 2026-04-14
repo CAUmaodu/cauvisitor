@@ -44,7 +44,7 @@
 
 6. 配置IIS网站：物理路径指向dist目录 端口80
 
-7. 部署web.config：在dist目录放入URL Rewrite规则（反向代理/cauvisitor至localhost:8081）
+7. 部署web.config：在dist目录放入URL Rewrite规则(web.config文件)（反向代理/cauvisitor至localhost:8081）
 
 8. 启动后端：java -jar VistorService.jar 或 mvn spring-boot:run
 
