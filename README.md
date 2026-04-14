@@ -1,4 +1,4 @@
-# 中国农业大学东校区智慧校园导览系统
+# 智慧校园导览系统
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Docker](https://img.shields.io/badge/docker-compose-green.svg)
@@ -8,7 +8,7 @@
 
 ## 📖 项目简介 (Introduction)
 
-这是一个基于 **WebGIS** 技术的 **中国农业大学东校区智慧校园导览系统 (Smart Campus Visitor System)**。它专为校园场景设计，集成了校园高精度地图展示、POI 兴趣点查询、**校内路径规划 (最短路径导航)** 、3D街景以及失物招领等功能，致力于打造便捷的**智慧游客系统**。
+这是一个基于 **WebGIS** 技术的 **智慧校园导览系统 (Smart Campus Visitor System)**。它专为校园场景设计，集成了校园高精度地图展示、POI 兴趣点查询、**校内路径规划 (最短路径导航)** 、3D街景以及失物招领等功能，致力于打造便捷的**智慧游客系统**。
 
 
 ### ✨ 核心功能
